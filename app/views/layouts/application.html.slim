@@ -1,0 +1,15 @@
+doctype html
+html.no-js.one-page-layout data-classic-layout="false" data-inanimation="fadeInUp" data-mobile-only-classic-layout="true" data-outanimation="fadeOutDownBig" lang="en" 
+  head
+    = render 'shared/head'
+  body
+  	#container.container
+  		header.header
+  			= render 'shared/header'
+  		.wrapper
+    		= yield
+    .p-overlay
+    .p-overlay
+    / ALERT used for contact form mail delivery alert
+    .site-alert.animated
+    = render 'shared/scripts'

@@ -1,0 +1,125 @@
+.content
+  /! row
+  .row
+    /! column 6/12
+    .col-md-6
+      h2.section-title
+        span
+          i.icon-address-book
+          | LET'S GET IN TOUCH
+      /! LETTER
+      .letter
+        h4.letter-title Johhny Alexander Doe
+        .stamp
+          img alt="stamp" src="images/site/stamp-image.png" /
+        .letter-info
+          p
+            i.icon-at
+            | johhny@gmail.com
+          p
+            i.icon-phone
+            | 123 456 78 99
+          p
+            i.icon-location
+            | 121 King Street, Melbourne Victoria 3000 Australia
+      /! LETTER
+      h2.section-title
+        span
+          i.icon-paper-plane
+          | DROP ME A LINE
+      /! .contact-form
+      .contact-form
+        form#contact-form action="send-mail.php" method="post" 
+          /! enter mail subject here
+          input#subject name="subject" type="hidden" value=("You have a new message from cvCard!") /
+          p
+            label for="name"  NAME
+            input#name.required name="name" type="text" /
+          p
+            label for="email"  EMAIL
+            input#email.required.email name="email" type="text" /
+          p
+            label for="message"  MESSAGE
+            textarea#message.required name="message" 
+          p
+            input.submit.button.primary type="submit" value="SEND" /
+      /! .contact-form
+    /! column 6/12
+    /! column 6/12
+    .col-md-6
+      h2.section-title
+        span
+          i.icon-chat
+          | LET'S SOCIALIZE
+      /! SOCIAL
+      ul.social
+        li
+          a.facebook href="#" 
+        li
+          a.twitter href="#" 
+        li
+          a.linkedin href="#" 
+        li
+          a.google-plus href="#" 
+        li
+          a.pinterest href="#" 
+        li
+          a.github href="#" 
+        li
+          a.behance href="#" 
+        li
+          a.dribbble href="#" 
+        li
+          a.instagram href="#" 
+        li
+          a.lastfm href="#" 
+        li
+          a.rss href="#" 
+        li
+          a.vimeo href="#" 
+        li
+          a.forrst href="#" 
+        li
+          a.skype href="#" 
+        li
+          a.picasa href="#" 
+        li
+          a.youtube href="#" 
+        li
+          a.flickr href="#" 
+        li
+          a.tumblr href="#" 
+        li
+          a.blogger href="#" 
+        li
+          a.delicious href="#" 
+        li
+          a.digg href="#" 
+        li
+          a.friendfeed href="#" 
+        li
+          a.wordpress href="#" 
+        li
+          a.stack-overflow href="#" 
+        li
+          a.foursquare href="#" 
+        li
+          a.xing href="#" 
+        li
+          a.weibo href="#" 
+        /!
+          | <li><a class="soundcloud" href="#"></a></li
+          | <li><a class="fivehundredpx" href="#"></a></li
+          | <li><a class="slideshare" href="#"></a></li
+      /! SOCIAL
+      h2.section-title
+        span
+          i.icon-location
+          | LOCATION
+      /! GOOGLE MAP
+      .map
+        #map-canvas.map-canvas data-latitude="-25.363882" data-longitude="131.044922" data-zoom="4" 
+      /! GOOGLE MAP
+    /! column 6/12
+    /! column 6/12
+  /! row
