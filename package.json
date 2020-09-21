@@ -5,6 +5,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
     "modernizr": "^3.11.3",
+    "normalize.css": "^3.0.3",
     "webpack-modernizr-loader": "^5.0.0"
   },
   "version": "0.1.0",
