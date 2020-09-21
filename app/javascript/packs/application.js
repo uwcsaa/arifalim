@@ -5,6 +5,9 @@
 
 require("@rails/ujs").start()
 require("../js/plugins")
+require("../js/main")
+
+//require.context('../images', true)
 
 require("../scss/application")
 
