@@ -4,6 +4,8 @@
   "dependencies": {
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.3.0",
+    "bootstrap-sass": "^3.2.0",
+    "jquery": "^1.12.4",
     "modernizr": "^3.11.3",
     "normalize.css": "^3.0.3",
     "webpack-modernizr-loader": "^5.0.0"
