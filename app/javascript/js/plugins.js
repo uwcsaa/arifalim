@@ -11,6 +11,7 @@ imagesLoaded.makeJQueryPlugin( $ );
 import Isotope from 'isotope-layout';
 import jQueryBridget from 'jquery-bridget';
 jQueryBridget( 'isotope', Isotope, $ );
+require("jquery-migrate/dist/jquery-migrate.min")
 
 require("flexslider")
 require("fitvids")
