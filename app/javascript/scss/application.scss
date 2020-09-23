@@ -1,0 +1,20 @@
+@import "~normalize.css";
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+$fa-font-path: '~font-awesome/fonts';
+@import "~font-awesome/scss/font-awesome";
+
+@import "~nprogress/nprogress";
+@import "~flexslider/flexslider";
+@import "../css/vendor/animate";
+@import "../css/vendor/fontello";
+@import "../css/vendor/jquery.fancybox-1.3.4";
+@import "../css/vendor/prettify";
+@import "../css/vendor/tooltipster";
+
+$jquery-uniform-img-path: "~jquery-uniform/themes/default/images";
+@import "~jquery-uniform/themes/default/css/uniform.default";
+
+@import "style";
+@import "main";
