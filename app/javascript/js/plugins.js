@@ -20,7 +20,6 @@ require("./vendor/jquery.fancybox-1.3.4")
 require("./vendor/jquery.tooltipster.min")
 require("./vendor/prettify")
 require("twitter-fetcher")
-// mediaelement
 require("./vendor/send-mail")
 
 
