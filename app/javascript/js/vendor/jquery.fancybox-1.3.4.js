@@ -1,5 +1,3 @@
-import "jquery-migrate"
-
 /*
  * FancyBox - jQuery Plugin
  * Simple and fancy lightbox alternative

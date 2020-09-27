@@ -11,6 +11,7 @@ imagesLoaded.makeJQueryPlugin( $ );
 import Isotope from 'isotope-layout';
 import jQueryBridget from 'jquery-bridget';
 jQueryBridget( 'isotope', Isotope, $ );
+require("jquery-migrate/dist/jquery-migrate.min")
 
 require("flexslider")
 require("fitvids")
@@ -20,7 +21,6 @@ require("./vendor/jquery.fancybox-1.3.4")
 require("./vendor/jquery.tooltipster.min")
 require("./vendor/prettify")
 require("twitter-fetcher")
-// mediaelement
 require("./vendor/send-mail")
 
 
