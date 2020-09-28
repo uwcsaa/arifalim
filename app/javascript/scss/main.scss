@@ -624,30 +624,6 @@ a.more-link,
 	.classic-layout .vs-nav li.current_page_item a {
 	 	color: #fff; background: #333; border-color: transparent;
 		}
-	
-/* SEARCH */
-.header-search { 
-	display: none; padding: 1.4em 0;
-	}
-.search-link { 
-	cursor: pointer; 
-	} 
-.search-link:hover, 
-.search-link.active { 
-	border-color: rgba(0, 0, 0, 0) !important; background: #456 !important; 
-	} 
-#search-form { 
-	position:relative; margin-left: -14px; 
-	}
-#search-form #search { 
-	width: 280px; padding-right: 36px; outline: 0; 
-	}
-#search-form #search:focus { 
-	color:#333; 
-	}
-#search-submit { 
-	margin: 0 0 0 -40px; font-size:17px; text-shadow:none; color:#444; border:0; outline:0; padding:0; background:none; 
-	}
 
 
 /*  --------------------------------------------

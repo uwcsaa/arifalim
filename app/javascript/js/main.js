@@ -59,16 +59,7 @@ var $container, $blog_container;
 			}
 		}
 		// ------------------------------
-		
-		// ------------------------------
-		// SEARCH
-		$('.search-link').click(function() {
-			$(this).toggleClass('active');
-			$('.header-search').slideToggle();
-		});
-		// ------------------------------
-		
-		
+
 			
 		// ------------------------------
 		// ONE PAGE LAYOUT FUNCTIONS
