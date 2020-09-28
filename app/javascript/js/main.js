@@ -148,30 +148,7 @@ var $container, $blog_container;
 			
 		});
 		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// FORM VALIDATION
-		// comment form validation fix
-		$('#commentform').addClass('validate-form');
-		$('#commentform').find('input,textarea').each(function(index, element) {
-            if($(this).attr('aria-required') == "true") {
-				$(this).addClass('required');
-			}
-			if($(this).attr('name') == "email") {
-				$(this).addClass('email');
-			}
-		});
-		
-		// validate form
-		if($('.validate-form').length) {
-			$('.validate-form').each(function() {
-					$(this).validate();
-				});
-		}
-		// ------------------------------
-		
+
 		
 		// ------------------------------
 		// FILL SKILL BARS

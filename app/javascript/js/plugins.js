@@ -15,5 +15,4 @@ require("jquery-migrate/dist/jquery-migrate.min")
 
 require("flexslider")
 require("fitvids")
-require("jquery-validation")
 require("./vendor/jquery.tooltipster.min")
