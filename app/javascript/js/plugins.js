@@ -14,5 +14,4 @@ jQueryBridget( 'isotope', Isotope, $ );
 require("jquery-migrate/dist/jquery-migrate.min")
 
 require("flexslider")
-require("fitvids")
 require("./vendor/jquery.tooltipster.min")
