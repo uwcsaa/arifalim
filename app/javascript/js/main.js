@@ -283,18 +283,7 @@ var $container, $blog_container;
 			return false;
 		});
 		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// RESPONSIVE VIDEOS
-		if($('.media-wrap, .portfolio-single').length) {
-			$(".media-wrap, .portfolio-single").fitVids();
-		}
-		// ------------------------------
-		
-		
-		
+
 		// ------------------------------
 		// UNIFORM
 		$("select:not([multiple]), input:checkbox, input:radio, input:file").uniform();
