@@ -238,16 +238,6 @@ var $container, $blog_container;
 	// ------------------------------
 	// SETUP : plugins
 	function setup() {
-
-		// ------------------------------
-		// CODE PRETTIFY
-		if($('.prettyprint').length) {
-			window.prettyPrint && prettyPrint();
-		}
-		// ------------------------------
-		
-		
-		
 		// ------------------------------
 		// TABS
 		$('.tabs').each(function() {
