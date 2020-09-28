@@ -154,26 +154,6 @@ var $container, $blog_container;
 	// SETUP : plugins
 	function setup() {
 		// ------------------------------
-		// TABS
-		$('.tabs').each(function() {
-			if(!$(this).find('.tab-titles li a.active').length) {
-				$(this).find('.tab-titles li:first-child a').addClass('active');
-				$(this).find('.tab-content > div:first-child').show();
-			} else {
-				$(this).find('.tab-content > div').eq($(this).find('.tab-titles li a.active').parent().index()).show();	
-			}
-		});
-		
-		$('.tabs .tab-titles li a').click(function() {
-			if($(this).hasClass('active')) { return; }
-			$(this).parent().siblings().find('a').removeClass('active');
-			$(this).addClass('active');
-			$(this).parents('.tabs').find('.tab-content > div').hide().eq($(this).parent().index()).show();
-			return false;
-		});
-		// ------------------------------
-
-		// ------------------------------
 		var ua = navigator.userAgent.toLowerCase();
 		var isAndroid = ua.indexOf("android") > -1;
 		var isWindowsPhone = ua.indexOf("windows phone") > -1;
