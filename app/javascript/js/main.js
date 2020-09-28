@@ -28,37 +28,6 @@ var $container, $blog_container;
 		
 		
 		setMasonry();
-		
-		// ------------------------------
-		// Rotating Words
-		var rotate_words = $('.rotate-words');
-		if(rotate_words.length) {
-			
-			if(Modernizr.csstransforms) {
-			
-				rotate_words.each(function(index, element) {
-					$(element).find('span').eq(0).addClass('active');
-					setInterval(function(){
-						let next_word_index = $(element).find('.active').next().length ? $(element).find('.active').next().index() : 0;
-						$(element).find('.active').addClass('rotate-out').removeClass('rotate-in active');
-						$(element).find('span').eq(next_word_index).addClass('rotate-in active').removeClass('rotate-out');
-					},3000);
-				});
-	
-			}
-			else {
-				
-				rotate_words.each(function(index, element) {
-					$(element).find('span').eq(0).addClass('active').show();
-					setInterval(function(){
-						let next_word_index = $(element).find('.active').next().length ? $(element).find('.active').next().index() : 0;
-						$(element).find('.active').removeClass('active').slideUp(500);
-						$(element).find('span').eq(next_word_index).addClass('active').slideDown(500);
-					},3000);
-				});
-			}
-		}
-		// ------------------------------
 
 			
 		// ------------------------------
@@ -149,12 +118,6 @@ var $container, $blog_container;
 		});
 		// ------------------------------
 
-		
-		// ------------------------------
-		// FILL SKILL BARS
-		fillBars();
-		// ------------------------------
-
 	});
 	// DOCUMENT READY
 	
@@ -209,32 +172,6 @@ var $container, $blog_container;
 			return false;
 		});
 		// ------------------------------
-		
-		
-		// ------------------------------
-		// TOGGLES
-		var toggleSpeed = 300;
-		$('.toggle h4.active + .toggle-content').show();
-	
-		$('.toggle h4').click(function() {
-			if($(this).hasClass('active')) { 
-				$(this).removeClass('active');
-				$(this).next('.toggle-content').stop(true,true).slideUp(toggleSpeed);
-			} else {
-				
-				$(this).addClass('active');
-				$(this).next('.toggle-content').stop(true,true).slideDown(toggleSpeed);
-				
-				//accordion
-				if($(this).parents('.toggle-group').hasClass('accordion')) {
-					$(this).parent().siblings().find('h4').removeClass('active');
-					$(this).parent().siblings().find('.toggle-content').stop(true,true).slideUp(toggleSpeed);
-				}
-				
-			}
-			return false;
-		});
-		// ------------------------------
 
 		// ------------------------------
 		var ua = navigator.userAgent.toLowerCase();
@@ -249,13 +186,6 @@ var $container, $blog_container;
 			// remove click delay on touch devices
 			FastClick.attach(document.body);
 			// ------------------------------
-		}
-		// ------------------------------
-		
-		// ------------------------------
-		/* MEDIAELEMENT.JS - self hosted html5 video and audio player */
-		if($('video,audio').length) {
-			$('video,audio').mediaelementplayer({ audioHeight: 50 });	
 		}
 		// ------------------------------
 	}
@@ -367,19 +297,6 @@ var $container, $blog_container;
 		}
 	}	
 	// ------------------------------
-	
-	
-	
-	// ------------------------------
-	// FILL PROGRESS BARS
-	function fillBars() {
-		$('.bar').each(function() {
-			 var bar = $(this);
-			 bar.find('.progress').css('width', bar.attr('data-percent') + '%' );
-			});
-	}	
-	// ------------------------------	
-
 
 	// ------------------------------
 	// SET CURRENT MENU ITEM

@@ -91,7 +91,6 @@ blockquote:before,
 .testo:before,
 .post-format:before,
 .flex-direction-nav a:before,
-.toggle h4:before,
 dd:before,
 .portfolio-nav .back:before,
 .process:before {
@@ -517,45 +516,6 @@ h2 i.fa {
 	.intro h2 strong {
 		letter-spacing: -1px; font-weight: 800;
 		}
-
-/* ROTATE WORDS */
-.rotate-words {
-	display: inline-block; min-width: 180px; min-height: 19px; text-align: left; text-indent: 4px;
-	}
-.rotate-words span {
-	position: absolute; opacity: 0; font-weight: 800; letter-spacing: -1px;
-	}
-.rotate-words span.rotate-in {
-	animation: rotateInWord .5s linear forwards;
-	-webkit-animation: rotateInWord .5s linear forwards;
-	}
-.rotate-words span.rotate-out {
-	animation: rotateOutWord .5s linear forwards;
-	-webkit-animation: rotateOutWord .5s linear forwards;
-	}
-.rotate-words span:first-child {
-	opacity: 1; 
-	}
-.no-csstransforms .rotate-words span {
-	display: none; opacity: 1;
-	}
-
-@-webkit-keyframes rotateInWord {
-    0% { opacity: 0; -webkit-transform: translateY(-30px); }
-	100% { opacity: 1; -webkit-transform: translateY(0px); }
-}
-@-webkit-keyframes rotateOutWord {
-    0% { opacity: 1; -webkit-transform: translateY(0px); }
-	100% { opacity: 0; -webkit-transform: translateY(30px); }
-}
-@keyframes rotateInWord {
-    0% { opacity: 0; transform: translateY(-30px); }
-	100% { opacity: 1; transform: translateY(0px); }
-}
-@keyframes rotateOutWord {
-    0% { opacity: 1; transform: translateY(0px); }
-	100% { opacity: 0; transform: translateY(30px); }
-}
 
 /* SERVICE */
 .service {
@@ -1076,29 +1036,6 @@ a.button.colored {
 		.tabs .tab-content > div {
  			padding: 2em; font-size: 15px; display: none;
 			}
-			
-/* TOGGLES */
-.toggle-group {
-	margin-bottom: 2em;
-	}
-.toggle {
- 	font-size: 1em;
-	}
-	.toggle h4 {
- 	position: relative; font-size: 1em; font-weight: 300; border-left: 0; padding: .8em 1em .8em 1.8em; margin: 0; cursor: pointer; border-bottom: 1px solid #EAEEEF;
-		}
-	.toggle h4.active {
- 		border-bottom: 0; font-weight: 600;
-		}
-	.toggle h4:before {
- 		content: "\f067"; color: #B7C6C9; position: absolute; top: 1.7em; left: 0.4em; font-size: 12px; line-height: 1;
-		}
-	.toggle h4.active:before {
- 		content: "\f068";
-		}
-	.toggle .toggle-content {
- 		display: none; padding: .2em 0 1em 1.8em; border-bottom: 1px solid #eee;
-		}
 
 /* CTA */
 .cta,
@@ -1946,9 +1883,6 @@ a.more-link:hover {
 	/* intro text */
 	.intro h2 {
 		font-size: 1.6em; 
-		}
-	.rotate-words {
-		min-height: 28px; min-width: 166px;
 		}
 	
 	/* timeline */

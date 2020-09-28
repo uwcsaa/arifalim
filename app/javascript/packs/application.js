@@ -7,8 +7,6 @@ require("@rails/ujs").start()
 require("../js/plugins")
 require("../js/main")
 
-//require.context('../images', true)
-
 require("../scss/application")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
