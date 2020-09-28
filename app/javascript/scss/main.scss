@@ -84,7 +84,6 @@ button {
 	}
 /* FONT AWESOME ICONS */
 .fancy-ico:before,
-#fancybox-close:before,
 .icon,
 .icon:before,
 .mask:before,
@@ -353,7 +352,6 @@ label.error:after {
 input,
 textarea,
 .social li a,
-#fancybox-close,
 .classic-layout .vs-nav li a,
 .latest-posts article header a,
 .button,
@@ -1660,60 +1658,6 @@ a.button.colored {
 .show-buttons .button {
  	margin: 0 1em 1em 0
 	}
-
-/* FANCYBOX STYLES */
-#fancybox-tmp, 
-#fancybox-loading, 
-#fancybox-overlay, 
-#fancybox-wrap {
-	z-index: 5000;
-	}
-.lightbox-active .container {
- 	-webkit-filter: saturate(10%); filter: saturate(10%);
-	}
-.lightbox.hidden {
- 	display: none
-	}
-#fancybox-loading {
- 	display: none !important
-	}
-.fancy-ico {
- 	padding: 16px 16px 13px 16px; line-height: 100%; font-size: 8px; color: #333; background: #fff; border-radius: 4px;
-	}
-#fancybox-left:hover .fancy-ico,
-#fancybox-right:hover .fancy-ico {
- 	color: #fff; background: #333;
-	}
-#fancybox-close:before,
-.fancy-ico:before {
- 	display: inline
-	}
-#fancybox-close:before {
- 	content: "\f00d"; font-size: 1em;
-	}
-.fancy-ico:before {
- 	font-size: 3em
-	}
-#fancybox-right-ico:before {
- 	content: "\f105"
-	}
-#fancybox-left-ico:before {
- 	content: "\f104"
-	}
-.fancy-ico,
-#fancybox-close {
- 	display: inline-block; cursor: pointer;
-	}
-.fancy-ico:hover,
-#fancybox-close:hover {
- 	opacity: 1
-	}
-#fancybox-close {
- 	padding: 26px; line-height: 80%; font-size: 16px; opacity: 1; color: #fff; background: #361C76; border-radius: 50%;
-	}
-#fancybox-close:hover {
- 	background: #D4643E
-	}
 	
 /* PORTFOLIO DETAILS */
 .p-overlay-on #container {
@@ -2797,7 +2741,6 @@ a.more-link:hover,
 .letter-info p i,
 .media-cell-desc .date,
 #nprogress .bar,
-#fancybox-close,
 .portfolio-nav a.button.back {
 	background: #361C76;
 	}
