@@ -1213,8 +1213,7 @@ a.button.colored {
  		margin-top: 0
 		}
 	.portfolio-field img,
-	.portfolio-field .fluid-width-video-wrapper,
-	.portfolio-field .flexslider .slides img {
+	.portfolio-field .fluid-width-video-wrapper {
 		margin-bottom: 0; 
 		}
 .portfolio-title h2 {
@@ -1352,9 +1351,7 @@ a.button.colored {
 	.entry-meta .edit-link {
 		float: right
 		}
-.entry-content .flexslider {
-	margin-top: 22px; 
-	}
+
 /* more link */
 a.more-link {
 	display: block; max-width: 17em; text-align: center; margin: 2em 0 0 0; padding: 1.4em 0; color: #0A5274; font-weight: 400; font-size: 12px; letter-spacing: .03em; background: none; border: 2px solid #DDE4E6; border-radius: 4px; text-transform: uppercase; font-weight: 800;
@@ -1463,9 +1460,6 @@ a.more-link:hover {
 /* gallery  */
 .format-gallery .entry-meta .post-format:before {
  	content: "\e8c4"
-	}
-.format-gallery .flexslider {
- 	margin-bottom: 50px
 	}
 .flex-direction-nav a {
  	text-align: center; color: #fff;

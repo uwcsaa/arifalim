@@ -251,54 +251,6 @@ var $container, $blog_container;
 			// ------------------------------
 		}
 		// ------------------------------
-		 
-		 
-		 
-		// ------------------------------
-		/* FLEX SLIDER */
-		// cache container
-		var $flexslider = $('.flexslider');
-		if($flexslider.length) {
-			
-			$flexslider.each(function() {
-			
-				//wait for images
-				$(this).imagesLoaded(function() {
-					
-					//remove loading
-					$(this).find('.loading').remove();
-					
-					//setup slider
-					$(this).flexslider({ 
-						smoothHeight: true,
-						slideshow: $(this).attr('data-autoplay') != "false",
-						slideshowSpeed: $(this).attr('data-interval'), 
-						animationSpeed : $(this).attr('data-animationSpeed'),
-						animation: $(this).attr('data-animation'), 
-						direction : $(this).attr('data-direction'),
-						directionNav : $(this).attr('data-directionNav') != "false",
-						controlNav : $(this).attr('data-controlNav') != "false",
-						randomize : $(this).attr('data-randomize') == "true",
-						startAt : $(this).attr('data-startAt') != null ? parseInt($(this).attr('data-startAt')) : 0,
-						animationLoop : $(this).attr('data-animationLoop') != "false",
-						pauseOnHover : $(this).attr('data-pauseOnHover') != "false",
-						reverse : $(this).attr('data-reverse') == "true",
-						prevText: "",
-						nextText: "",
-						start: function(slider) {
-								slider.find('li img').click(function(event){	
-									event.preventDefault();
-									slider.flexAnimate(slider.getTarget("next"));
-								});
-							}
-						});
-					
-				});
-			
-			});
-		}
-		// ------------------------------
-		
 		
 		// ------------------------------
 		/* MEDIAELEMENT.JS - self hosted html5 video and audio player */
