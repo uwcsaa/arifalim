@@ -28,82 +28,7 @@ var $container, $blog_container;
 		
 		
 		setMasonry();
-		
-		// ------------------------------
-		// Rotating Words
-		var rotate_words = $('.rotate-words');
-		if(rotate_words.length) {
-			
-			if(Modernizr.csstransforms) {
-			
-				rotate_words.each(function(index, element) {
-					$(element).find('span').eq(0).addClass('active');
-					setInterval(function(){
-						let next_word_index = $(element).find('.active').next().length ? $(element).find('.active').next().index() : 0;
-						$(element).find('.active').addClass('rotate-out').removeClass('rotate-in active');
-						$(element).find('span').eq(next_word_index).addClass('rotate-in active').removeClass('rotate-out');
-					},3000);
-				});
-	
-			}
-			else {
-				
-				rotate_words.each(function(index, element) {
-					$(element).find('span').eq(0).addClass('active').show();
-					setInterval(function(){
-						let next_word_index = $(element).find('.active').next().length ? $(element).find('.active').next().index() : 0;
-						$(element).find('.active').removeClass('active').slideUp(500);
-						$(element).find('span').eq(next_word_index).addClass('active').slideDown(500);
-					},3000);
-				});
-			}
-		}
-		// ------------------------------
-		
-		
-		// ------------------------------
-		/* LATEST TWEETS WIDGET */
-		var latest_tweets = $('#latest-tweets');
-		if(latest_tweets.length) {
-			var config = {
-			  "profile": {"screenName": latest_tweets.data("twitter-name")},
-			  "domId": '',
-			  "maxTweets": latest_tweets.data("tweet-count"),
-			  "enableLinks": true,
-			  "showUser": false,
-			  "showTime": true,
-			  "dateFunction": '',
-			  "showRetweet": latest_tweets.data("include-retweets"),
-			  "customCallback": handleTweets,
-			  "showInteraction": false
-			};
-			function handleTweets(tweets){
-			  var x = tweets.length;
-			  var n = 0;
-			  var html = '<ul>';
-			  while(n < x) {
-				html += '<li>' + tweets[n] + '</li>';
-				n++;
-			  }
-			  html += '</ul>';
-			  latest_tweets.html(html);
-			}
-			twitterFetcher.fetch(config);
-		}	 
-		// ------------------------------
-		
-		
-		
-		
-		// ------------------------------
-		// SEARCH
-		$('.search-link').click(function() {
-			$(this).toggleClass('active');
-			$('.header-search').slideToggle();
-		});
-		// ------------------------------
-		
-		
+
 			
 		// ------------------------------
 		// ONE PAGE LAYOUT FUNCTIONS
@@ -192,82 +117,7 @@ var $container, $blog_container;
 			
 		});
 		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// FORM VALIDATION
-		// comment form validation fix
-		$('#commentform').addClass('validate-form');
-		$('#commentform').find('input,textarea').each(function(index, element) {
-            if($(this).attr('aria-required') == "true") {
-				$(this).addClass('required');
-			}
-			if($(this).attr('name') == "email") {
-				$(this).addClass('email');
-			}
-		});
-		
-		// validate form
-		if($('.validate-form').length) {
-			$('.validate-form').each(function() {
-					$(this).validate();
-				});
-		}
-		// ------------------------------
-		
-		
-		// ------------------------------
-		// FILL SKILL BARS
-		fillBars();
-		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		/* TOOLTIPS */
-		$('.tooltip').each(function(index, element) {
-        	$(this).tooltipster({
-			position: $(this).attr('data-tooltip-pos'),
-			fixedWidth : 300,
-			offsetX : 0,
-			animation : "grow",
-			delay : 50
-			});
-	 
-        });	
-		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// GOOGLE MAP
-		/*
-			custom map with google api
-			check out the link below for more information about api usage
-			https://developers.google.com/maps/documentation/javascript/examples/marker-simple
-		*/
-		function initializeMap() {
-			if($('.map').length) {
-				var mapCanvas = $('#map-canvas');
-				var myLatlng = new google.maps.LatLng(mapCanvas.data("latitude"),mapCanvas.data("longitude"));
-				var mapOptions = {
-					zoom: mapCanvas.data("zoom"),
-					center: myLatlng
-				}
-				var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-				
-				var marker = new google.maps.Marker({
-				  position: myLatlng,
-				  map: map
-		  	});
-			}
-		  
-		}
-		google.maps.event.addDomListener(window, 'load', initializeMap);
-		// ------------------------------
-		
-		
+
 	});
 	// DOCUMENT READY
 	
@@ -304,81 +154,6 @@ var $container, $blog_container;
 	// SETUP : plugins
 	function setup() {
 		// ------------------------------
-		// LIGHTBOX
-		setupLigtbox();
-		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// CODE PRETTIFY
-		if($('.prettyprint').length) {
-			window.prettyPrint && prettyPrint();
-		}
-		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// TABS
-		$('.tabs').each(function() {
-			if(!$(this).find('.tab-titles li a.active').length) {
-				$(this).find('.tab-titles li:first-child a').addClass('active');
-				$(this).find('.tab-content > div:first-child').show();
-			} else {
-				$(this).find('.tab-content > div').eq($(this).find('.tab-titles li a.active').parent().index()).show();	
-			}
-		});
-		
-		$('.tabs .tab-titles li a').click(function() {
-			if($(this).hasClass('active')) { return; }
-			$(this).parent().siblings().find('a').removeClass('active');
-			$(this).addClass('active');
-			$(this).parents('.tabs').find('.tab-content > div').hide().eq($(this).parent().index()).show();
-			return false;
-		});
-		// ------------------------------
-		
-		
-		// ------------------------------
-		// TOGGLES
-		var toggleSpeed = 300;
-		$('.toggle h4.active + .toggle-content').show();
-	
-		$('.toggle h4').click(function() {
-			if($(this).hasClass('active')) { 
-				$(this).removeClass('active');
-				$(this).next('.toggle-content').stop(true,true).slideUp(toggleSpeed);
-			} else {
-				
-				$(this).addClass('active');
-				$(this).next('.toggle-content').stop(true,true).slideDown(toggleSpeed);
-				
-				//accordion
-				if($(this).parents('.toggle-group').hasClass('accordion')) {
-					$(this).parent().siblings().find('h4').removeClass('active');
-					$(this).parent().siblings().find('.toggle-content').stop(true,true).slideUp(toggleSpeed);
-				}
-				
-			}
-			return false;
-		});
-		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// RESPONSIVE VIDEOS
-		if($('.media-wrap, .portfolio-single').length) {
-			$(".media-wrap, .portfolio-single").fitVids();
-		}
-		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		// UNIFORM
-		$("select:not([multiple]), input:checkbox, input:radio, input:file").uniform();
 		var ua = navigator.userAgent.toLowerCase();
 		var isAndroid = ua.indexOf("android") > -1;
 		var isWindowsPhone = ua.indexOf("windows phone") > -1;
@@ -391,61 +166,6 @@ var $container, $blog_container;
 			// remove click delay on touch devices
 			FastClick.attach(document.body);
 			// ------------------------------
-		}
-		// ------------------------------
-		 
-		 
-		 
-		// ------------------------------
-		/* FLEX SLIDER */
-		// cache container
-		var $flexslider = $('.flexslider');
-		if($flexslider.length) {
-			
-			$flexslider.each(function() {
-			
-				//wait for images
-				$(this).imagesLoaded(function() {
-					
-					//remove loading
-					$(this).find('.loading').remove();
-					
-					//setup slider
-					$(this).flexslider({ 
-						smoothHeight: true,
-						slideshow: $(this).attr('data-autoplay') != "false",
-						slideshowSpeed: $(this).attr('data-interval'), 
-						animationSpeed : $(this).attr('data-animationSpeed'),
-						animation: $(this).attr('data-animation'), 
-						direction : $(this).attr('data-direction'),
-						directionNav : $(this).attr('data-directionNav') != "false",
-						controlNav : $(this).attr('data-controlNav') != "false",
-						randomize : $(this).attr('data-randomize') == "true",
-						startAt : $(this).attr('data-startAt') != null ? parseInt($(this).attr('data-startAt')) : 0,
-						animationLoop : $(this).attr('data-animationLoop') != "false",
-						pauseOnHover : $(this).attr('data-pauseOnHover') != "false",
-						reverse : $(this).attr('data-reverse') == "true",
-						prevText: "",
-						nextText: "",
-						start: function(slider) {
-								slider.find('li img').click(function(event){	
-									event.preventDefault();
-									slider.flexAnimate(slider.getTarget("next"));
-								});
-							}
-						});
-					
-				});
-			
-			});
-		}
-		// ------------------------------
-		
-		
-		// ------------------------------
-		/* MEDIAELEMENT.JS - self hosted html5 video and audio player */
-		if($('video,audio').length) {
-			$('video,audio').mediaelementplayer({ audioHeight: 50 });	
 		}
 		// ------------------------------
 	}
@@ -557,62 +277,7 @@ var $container, $blog_container;
 		}
 	}	
 	// ------------------------------
-	
-	
-	
-	// ------------------------------
-	// FILL PROGRESS BARS
-	function fillBars() {
-		$('.bar').each(function() {
-			 var bar = $(this);
-			 bar.find('.progress').css('width', bar.attr('data-percent') + '%' );
-			});
-	}	
-	// ------------------------------	
-	
-	
-	
-	// ------------------------------
-	// LIGHTBOX
-	function setupLigtbox() {
-		
-		//html5 validate fix
-		$('.lightbox').each(function(index, element) {
-			$(this).attr('rel', $(this).attr('data-lightbox-gallery'));
-		});
-		
-		if($("a[rel^='fancybox']").length) {
-			$("a[rel^='fancybox']").fancybox({
-				centerOnScroll : true,
-				padding : 10,
-				margin : 44,
-				width : 640,
-				height : 360,
-				transitionOut : 'none',
-				overlayColor : '#BEBD97',
-				overlayOpacity : '.6',
-				onStart : function() {
-					NProgress.start();
-					$( 'body' ).addClass( 'lightbox-active' );
-				},
-				onClosed : function() {
-					$( 'body' ).removeClass( 'lightbox-active' );
-				},
-				onComplete : function() {
-					NProgress.done();
-					if ($(this).attr('href').indexOf("soundcloud.com") >= 0) {
-						$('#fancybox-content').height(166);
-					}
-				}
-			});
-		}	
-	}
-	// ------------------------------	
-	
-	
-	
-	
-	
+
 	// ------------------------------
 	// SET CURRENT MENU ITEM
 	function setCurrentMenuItem() {

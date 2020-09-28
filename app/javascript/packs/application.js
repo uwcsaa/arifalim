@@ -3,11 +3,9 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
+//require("@rails/ujs").start()
 require("../js/plugins")
 require("../js/main")
-
-//require.context('../images', true)
 
 require("../scss/application")
 
