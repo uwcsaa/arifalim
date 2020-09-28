@@ -154,22 +154,6 @@ var $container, $blog_container;
 		// FILL SKILL BARS
 		fillBars();
 		// ------------------------------
-		
-		
-		
-		// ------------------------------
-		/* TOOLTIPS */
-		$('.tooltip').each(function(index, element) {
-        	$(this).tooltipster({
-			position: $(this).attr('data-tooltip-pos'),
-			fixedWidth : 300,
-			offsetX : 0,
-			animation : "grow",
-			delay : 50
-			});
-	 
-        });	
-		// ------------------------------
 
 	});
 	// DOCUMENT READY
