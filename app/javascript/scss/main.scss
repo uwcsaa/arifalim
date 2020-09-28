@@ -87,8 +87,6 @@ button {
 .icon,
 .icon:before,
 .mask:before,
-.alert:before,
-.site-alert:before,
 blockquote:before,
 .testo:before,
 .post-format:before,
@@ -837,17 +835,6 @@ h2 i.fa {
 	margin-top: 2em;
 	}
 
-/* HTTP ALERT */
-.http-alert {
- 	text-align: center
-	}
-	.http-alert h1 {
- 		margin: 0 0 .1em 0; font-size: 9em; letter-spacing: .03em; line-height: 1; color: #eee; text-shadow: 11px 12px 12px rgba(0, 0, 0, 0.2), -1px -1px 1px #333, 1px 1px 0 #333, 3px 3px 0 #333, 4px 4px 0 #333, 5px 5px 0 #333, 6px 6px 0 #333, 7px 7px 0 #333, 8px 8px 0 #333, 9px 9px 0 #333, 10px 10px 0 #333, 11px 11px 0 #333;
-		}
-	.http-alert p {
- 		font-style: italic
-		}
-
 /* TAGLINE */
 .tagline {
  	margin: 2em 0; padding: 1em 2em;
@@ -1112,35 +1099,6 @@ a.button.colored {
 	.toggle .toggle-content {
  		display: none; padding: .2em 0 1em 1.8em; border-bottom: 1px solid #eee;
 		}
-		
-/* ALERTS */
-.alert {
- 	position: relative; padding: 1.2em 1em 1em 4.4em; margin-bottom: 2em; font-size: 15px; border-radius: 6px; border: 3px solid #EAEEEF;
-	}
-.alert:before {
- 	content: "\f0c6"; color: #B7C6C9; position: absolute; top: 0.6em; left: .9em; font-size: 27px; line-height: 1;
-	}
-.alert.success {
- 	border-color: #AEE2A3
-	}
-.alert.success:before {
- 	content: "\f087"
-	}
-.alert.info {
- 	border-color: #E4E6C4
-	}
-.alert.info:before {
- 	content: "\f05a"
-	}
-.alert.error {
- 	border-color: #EE8F8F
-	}
-.alert.error:before {
- 	content: "\f06a"
-	}
-.alert strong {
- 	font-weight: 800
-	}
 
 /* CTA */
 .cta,
@@ -1175,21 +1133,7 @@ a.button.colored {
 	}
 	.launch .button {
   padding: 1.8em 3.6em; line-height: 1;
-		}	
-	
-/* SITE ALERT */
-.site-alert {
- 	display: none; position: fixed; z-index: 9900; top: 50%; left: 50%; margin: -80px 0 0 -80px; font-size: 6em; line-height: 1; padding: .4em .5em; color: #fff; text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); background: #264150; background: rgba(38, 65, 80, 0.4); border-radius: 20px;
-	}
-.site-alert:before {
- 	content: "\f14a"
-	}
-.site-alert.error {
- 	background: #F30; background: rgba(206, 78, 62, 0.6);
-	}
-.site-alert.error:before {
- 	content: "\f00d"
-	}	
+		}
 
 /* CONTACT FORM */
 .contact-form {
