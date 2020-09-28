@@ -88,8 +88,6 @@ button {
 .icon,
 .icon:before,
 .mask:before,
-.widget-twitter ul:before,
-.widget-twitter ul li:before,
 .alert:before,
 .site-alert:before,
 blockquote:before,
@@ -735,32 +733,6 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 	100% { opacity: 0; transform: translateY(30px); }
 }
 
-/* TWITTER WIDGET */
-.widget-twitter ul {
- 	list-style: none; padding: 0;
-	}
-	.widget-twitter li {
- 		position: relative; margin-bottom: .2em; padding-top: .1em; font-size: 14px;
-		}
-	.widget-twitter li:before {
- 		content: "\f099"; position: absolute; top: -12px; left: 50%; font-size: 36px; color: #111; margin-left: -16px;
-		}
-	.widget-twitter .tweet {
-		padding: 1.5em 2.4em; color: #333; background: #AAEBFF; border-radius: 4px;
-	}
-	.widget-twitter .timePosted {
- 		font-size: 10px; color: #B7C6C9; margin-top: -12px; text-align: center; letter-spacing: 1px; text-transform: uppercase;
-		}
-	.widget-twitter .timePosted a {
-		color: #ccc;
-		}
-	.widget-twitter .interact {
-		display: none; 
-		}
-	.widget-twitter ul li span + a {
- 		float: right; margin-top: .4em; color: #aaa;
-		}
-
 /* SERVICE */
 .service {
  text-align: center; padding: 1.6em 0 2em 0;
@@ -968,9 +940,6 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 		.social li a.facebook:before {
  			content: '\e800'
 			}
-		.social li a.twitter:before {
- 			content: '\e801'
-			}
 		.social li a.flickr:before {
  			content: '\e810'
 			}
@@ -1063,9 +1032,6 @@ h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
 			}
 		.social li a.facebook:hover {
  			background-color: #3c5fac
-			}
-		.social li a.twitter:hover {
- 			background-color: #5ec3df
 			}
 		.social li a.flickr:hover {
  			background-color: #FF0084

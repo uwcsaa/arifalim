@@ -21,7 +21,6 @@
     "modernizr": "^3.11.3",
     "normalize.css": "^3.0.3",
     "nprogress": "^0.2.0",
-    "twitter-fetcher": "^18.0.4",
     "webpack-modernizr-loader": "^5.0.0"
   },
   "version": "0.1.0",
