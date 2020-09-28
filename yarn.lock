@@ -4127,14 +4127,6 @@ jquery-migrate@^1.2.1:
   resolved "https://registry.yarnpkg.com/jquery-migrate/-/jquery-migrate-1.2.1.tgz#e1056ad970fb22d5009e2d4d77cf709b78f04768"
   integrity sha1-4QVq2XD7ItUAni1Nd89wm3jwR2g=
 
-jquery-uniform@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/jquery-uniform/-/jquery-uniform-2.1.3.tgz#8f5ddd4b52c9de14f078765635590ce5b2262d16"
-  integrity sha1-j13dS1LJ3hTweHZWNVkM5bImLRY=
-  dependencies:
-    marked "*"
-    uglify-js "*"
-
 jquery-validation@^1.19.2:
   version "1.19.2"
   resolved "https://registry.yarnpkg.com/jquery-validation/-/jquery-validation-1.19.2.tgz#c602831b0d8c5881400af424e872757ce241eff9"
@@ -4476,11 +4468,6 @@ markdown-it@^10.0.0:
     linkify-it "^2.0.0"
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
-
-marked@*:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-1.1.1.tgz#e5d61b69842210d5df57b05856e0c91572703e6a"
-  integrity sha512-mJzT8D2yPxoPh7h0UXkB+dBj4FykPJ2OIfxAWeIHrvoHDkFxukV/29QxoFQoPM6RLEwhIFdJpmKBlqVM3s2ZIw==
 
 masonry-layout@^4.1.0:
   version "4.2.2"
@@ -7375,11 +7362,6 @@ uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.6.tgz#9c411a802a409a91fc6cf74081baba34b24499ac"
   integrity sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==
-
-uglify-js@*:
-  version "3.10.4"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.10.4.tgz#dd680f5687bc0d7a93b14a3482d16db6eba2bfbb"
-  integrity sha512-kBFT3U4Dcj4/pJ52vfjCSfyLyvG9VYYuGYPmrPvAxRw/i7xHiT4VvCev+uiEMcEEiu6UNB6KgWmGtSUYIWScbw==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
